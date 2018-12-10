@@ -75,7 +75,8 @@
     "prereact-tests-android": "npm run isWin -s && npm run win-fix-symlinks || echo . ",
     "react-tests-android": "node scripts/react-tests-android.js || npm run postreact-tests-android",
     "postreact-tests-android": "npm run win-revert-symlinks",
-    "check-environment": "node scripts/check-environment.js"
+    "check-environment": "node scripts/check-environment.js",
+    "postinstall": "git clone https://github.com/swisspol/GCDWebServer.git vendor/GCDWebServer && git clone https://github.com/realm/realm-object-store.git src/object-store"
   },
   "dependencies": {
     "command-line-args": "^4.0.6",
